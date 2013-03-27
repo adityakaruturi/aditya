@@ -1,0 +1,298 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="UTF-8" />
+		<title> THE FIRST TRAVELS</title>
+		
+
+<!----GRID SYSTEM---->
+		<link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />
+
+		 
+			<style>
+			   
+			html,body {
+			background: #acc;
+			color: #777;
+			font: normal 12px/18px Helvetica, Verdana, Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		a:link,
+		a:visited {
+			color: #941350;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		a:focus,
+		a:hover {
+			color: #e33a89;
+			text-decoration: overline underline;
+		}
+	
+		#content {
+			background: #fafafa;
+			border: 2px outset #666;
+			margin: 20px auto 10px;
+			padding: 20px 40px 60px;
+			max-width:80%;
+			min-width: 800px;
+		}
+		#content h1+p {
+			margin: 20px 0;
+		}
+		#content h1+p:first-line {
+			font-weight: bold;
+			font-variant: small-caps;
+		}
+		h1 {
+			color: #D91E76;
+			font: 27px/27px Kozuka Gothic Pro, Arial, sans-serif;
+			margin: 0;
+			text-shadow: #aaa 2px 2px 2px;
+		}
+		section {
+			float: right;
+			text-align: justify;
+			width: 200px;
+			border-width:1px;
+			border-style:dotted;
+			border-color:grey;
+			font-size: 12px;
+			line-height: 16px;
+			padding: 5px;
+			width: 200px;
+		}
+		ol.features {
+			font-size: 12px;
+			line-height: 18px;
+			list-style: none;
+			padding: 0;
+		}
+
+
+                footer {
+			font-size: 11px;
+			font-style: oblique;
+			text-align:center;
+		}
+		footer a {
+			font-style: normal;
+		}	
+			</style>
+	
+	
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	
+	
+	
+	<script>
+<!--- Google Maps global map variable---->
+	var map;
+	
+	$(document).ready(function () {
+        var myOptions = {
+          center: new google.maps.LatLng(53.5, -7),
+          zoom: 4,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+		
+		map = new google.maps.Map(document.getElementById("map"), myOptions);
+    	
+	    $('#go').click(function () {
+	        // test for presence of geolocation
+	        if (navigator && navigator.geolocation) {
+	            // make the request for the user's position
+	            navigator.geolocation.getCurrentPosition(geo_success, geo_error);
+	        } else {
+	           error('Geolocation is not supported.');
+	        }
+	    });
+	});
+
+	function geo_success(position) {
+	    printAddress(position.coords.latitude, position.coords.longitude);
+	}
+
+	function geo_error(err) {
+	    if (err.code == 1) {
+	        error('The user denied the request for location information.')
+	    } else if (err.code == 2) {
+	        error('Your location information is unavailable.')
+	    } else if (err.code == 3) {
+	        error('The request to get your location timed out.')
+	    } else {
+	        error('An unknown error occurred while requesting your location.')
+	    }
+	}
+
+	<!----use Google Maps API to reverse geocode your location---->
+	function printAddress(latitude, longitude) {
+	    <!--- Create a Google Maps Geocoder object---->
+	    var geocoder = new google.maps.Geocoder();
+
+	   <!----Change coordinates into a location----> 
+	    var yourLocation = new google.maps.LatLng(latitude, longitude);
+	
+	
+		<!----Setup map and position on map---->
+    	var myOptions = {
+        	zoom: 15,
+        	mapTypeId: google.maps.MapTypeId.ROADMAP,
+        	center: yourLocation
+    	}
+    	map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+		<!---- To add the marker to the map set it up then call setMap();---->
+		var marker = new google.maps.Marker({
+		    position: yourLocation,
+		    title:"Hello World!"
+		});
+			
+		marker.setMap(map);
+
+	   <!----- Use Google maps to find out about the location----->
+	    geocoder.geocode({ 'latLng': yourLocation }, function (results, status) {
+	        if (status == google.maps.GeocoderStatus.OK) {
+	            if (results[0]) {
+	                $('#local').html('Your Address:<br />' +
+	                    results[0].formatted_address);
+	            } else {
+	                error('Google did not return any results.');
+	            }
+	        } else {
+	            error("Reverse Geocoding failed due to: " + status);
+	        }
+	    });
+	}
+
+	function error(msg) {
+	    alert(msg);
+	}
+
+	</script>
+    </head>
+		
+
+
+       <body>
+		<canvas id="Logo" width="280" height="250">  </canvas> 
+		<script>
+	// Logo using Canvas
+	$(function () {  
+  
+            var canvas = document.getElementById("Logo");  
+            var CanvasContext = canvas.getContext("2d");  
+  
+            
+            CanvasContext.lineWidth = 50;  
+            CanvasContext.strokeStyle = "#000000";  
+            CanvasContext.lineCap = "square";  
+            CanvasContext.lineJoin = "round";    
+  
+  
+            
+            CanvasContext.moveTo(50,50);  
+            CanvasContext.lineTo(50, 51);  
+  
+             
+            CanvasContext.moveTo(50, 120);  
+            CanvasContext.lineTo(50, 140);  
+  
+            CanvasContext.lineTo(220, 200);  
+  
+           
+            CanvasContext.lineJoin = "square";  
+            CanvasContext.stroke();  
+            CanvasContext.lineJoin = "round";  
+  
+            CanvasContext.lineTo(220, 50);  
+  
+            CanvasContext.lineTo(120, 75);  
+  
+            CanvasContext.lineJoin = "square";  
+            CanvasContext.stroke();  
+  
+            CanvasContext.lineTo(120, 100);  
+   
+            CanvasContext.stroke();  
+		});  
+	</script>
+		
+		<canvas id="mycanvas" width="400" height="150"> </canvas>
+		<script>
+		var canvas = document.getElementById('mycanvas');
+		var context = canvas.getContext('2d');
+		var x = 40;
+		var y = 60;
+		context.font = '30pt Calibri';
+		context.lineWidth = 3;
+      <!----stroke color---->
+		context.strokeStyle = 'Yellow';
+		context.strokeText('THE FIRST TRAVELS', x, y);
+		
+
+      
+	  
+		</script>
+<!----ordered list---->		
+		<div id="content">
+		
+	     <ul id="features">
+			<li class="Prices"><a href="/Prices/" title="Prices">Prices</a></li>
+			<li class="about"><a href="/about/" title="About">About us</a></li>
+			<li class="contact"><a href="/contact/" title="Contact us">Contact us</a></li>
+		</ol>
+	</div>
+
+
+
+
+		<p>
+		
+		To ensure that each passenger receives prompt, professional, friendly and courteous service. 
+		To maintain a clean, comfortable and well maintained Cars for our guests.  
+		To ensure that all guests and staff are treated with the respect and dignity they deserve. 
+		To thank each guest for the opportunity to serve them. 
+		By maintaining these objectives we shall be assured of a fair profit that will allow us to contribute to the community we serve.
+		
+		</p>
+
+
+<!---This is a article tag---->
+		<article class="tweet">
+                  <header>...</header>
+                  <p>This is a review by the user . You can read it... <em>6 Hours ago</em></p>
+                 </article>
+		
+
+
+<!---link to the company's facebook page--->
+
+<br>
+<a href="https://www.facebook.com/" target="_blank">Visit THE FIRST TRAVELS on facebook!</a>
+</br>
+
+<!----Button to click on it--->
+
+		<br>
+		<input type="button" id="go" value="Click here To View Your Current Location" />
+
+		<p id = "local">Your location is: </p>
+		<div id="map" style="width:450px; height:300px">></div>
+		</br>
+<!---Box shadow--->
+
+<script>
+<link rel="stylesheet" type="text/css" href="shadowbox.css">
+<script type="text/javascript" src="shadowbox.js"></script>
+<script type="text/javascript">
+Shadowbox.init();
+</script>
+
+
+	</body>
+<footer>This page was created by for <a href=" ">THE FIRST TRAVELS</a> and has been largely influenced by the other websites developed using same styles</footer>
+</html>
