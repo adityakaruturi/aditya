@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MOJA SLNEČNÁ SÚSTAVA</title>
+<meta name="author" content="Tomáš Stankovič">
+<meta name="description" content="">
+<meta name="keywords" content="solar system, css3">
+<link href="normalize.css" rel="stylesheet" media="screen"/>
+<link href="style.css" rel="stylesheet" media="screen"/>
+<script src="js/modernizrCustom.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='js/jquery.js'>\x3C/script>")</script>
+<script src="js/jquery.animate-colors-min.js"></script>
+<script src="js/script.js"></script>
+<script>
+	$(window).load(function(){							//FadeOut loader if page is full load
+			$('#spinner, #spinner-draha, .loading-text').fadeOut(1000, function(){
+				$('#loader').fadeOut(500, function(){
+					$('body').fadeIn().css({
+						'overflow-y': 'scroll'
+					});
+				});
+			});
+	});
+
+	$(document).ready(function(){		//Page loader
+		$('body').css({
+			'overflow-y': 'hidden'
+		});
+		$('<div id="loader"><div id="spinner-draha"><div id="spinner"><!-- --></div></div><p class="loading-text">Loading...</p></div>').appendTo('body');
+
+	});
+</script>
+</head>
+<body>
+	<div id="lang">
+		<a href="index.html">ENG</a> |
+		<a href="svk.html">SVK</a>
+	</div>
+	<div id="obal">
+		<div id="logo">
+			<h1 class="svk">Moja<br/><span>Slnečná<br/>sústava</span></h1>
+		</div>
+		<div id="raketa"><!-- --></div>
+		<!-- PLANETY -->
+		<div id="slnko"></div>
+		<div id="merkur-draha"><div id="merkur"><!-- --></div></div>
+		<div id="venusa-draha"><div id="venusa"><!-- --></div></div>
+		<div id="zem-draha"><div id="mesiac-draha"><div id="mesiac"><!-- --></div></div><div id="zem"><!-- --></div></div>
+		<div id="pas"><!-- --></div>
+		<div id="mars-draha"><div id="mars"><!-- --></div></div>
+		<div id="jupiter-draha"><div id="jupiter"><!-- --></div></div>
+		<div id="saturn-draha"><div id="saturn"><!-- --></div></div>
+		<div id="uran-draha"><div id="uran"><!-- --></div></div>
+		<div id="neptun-draha"><div id="neptun"><!-- --></div></div>
+	</div>
+
+	<!-- Koniec PLANET -->
+	<!-- Menu -->
+<div id="obal-obsah">
+	<h2>Chcem sa dozvedieť viac o planéte...</h2>
+	<ul>
+		<li class="mercuryList">Merkúr</li>
+		<li>Venuša</li>
+		<li>Zem</li>
+		<li>Mars</li>
+		<li>Jupiter</li>
+		<li>Saturn</li>
+		<li>Urán</li>
+		<li>Neptún</li>
+	</ul>
+	<!-- Koniec Menu -->
+	<!-- Popisky planet -->
+	<div id="popis-planety1" class="hideBox">
+		<h3 id="merkurScroll">Merkúr</h3>
+		<div class="popis">
+		<p>Merkúr je malá kamenná planéta s povrchom posiatym impaktnými krátermi. Merkúr nemá hustú atmosféru, ktorá by dokázala regulovať povrchovú teplotu. Z toho dôvodu jej rozdiel kolíše v rozmedzí +440 °C počas dňa a -180 °C v noci. Napriek tomu, že je Merkúr najbližšie k Slnku, nedrží teplotný rekord medzi planétami slnečnej sústavy. Ten patrí Venuši, ktorá je od Slnka síce ďalej, ale panuje na nej silný skleníkový efekt.<br />
+		Jeho priemer je 38 % priemeru Zeme, čo je 1,4-krát viac, ako priemer Mesiaca. Merkúr má vysokú hustotu a slabé, no predsa prítomné magnetické pole. Vytvára ho masívne kovové jadro planéty vo vnútri planéty. Merkúr obieha okolo Slnka najrýchlejšie zo všetkých planét, no jeho rotácia je, naopak, veľmi pomalá. Nemá nijaký mesiac.<br /><br />
+		Pre svoj najrýchlejší pohyb po oblohe zo všetkých planét bol pomenovaný podľa rímskeho posla bohov Merkúra. Planéta je známa už od staroveku, hoci sa voľným okom ťažšie pozoruje. Keďže sa jeho dráha nachádza vo vnútri dráhy Zeme, nikdy sa na oblohe nevzdiali od Slnka o viac ako 28°, a preto ho možno pozorovať len ráno, krátko pred východom, alebo večer, krátko po západe Slnka. Aj tak môže byť niekedy pomerne nápadným objektom na večernej alebo rannej oblohe.<br />
+		Donedávna ho skúmala len jedna kozmická sonda, Mariner 10, ktorá v rokoch 1974 – 75 trikrát preletela okolo Merkúra a urobila viac než 10 000 snímok jeho povrchu. V súčasnosti sa na výskume podieľa sonda MESSENGER, ktorá po troch preletoch bola v marci 2011 navedená na obežnú dráhu okolo planéty.</p></div>
+			<img src="img/mercury.png" class="planeta-pic" alt="Merkur"/>
+			<p class='odsadSvk'>Ukáž na planétu!</p>
+			<div class="info">
+			<p><strong>Priemer:</strong><br/> 4 880 km<br/><br/>
+			<strong>Vzdialenosť od Slnka:</strong><br/> 57,91 mil.km<br/><br/>
+			<strong>Dĺžka obehu:</strong><br/> 0,241 roku<br/><br/>
+			<strong>Dĺžka rotácie:</strong><br/> 1 407,6 hodín</p>
+		</div>
+	</div>
+<!-- VENUSA -->
+	<div id="popis-planety2" class="hideBox">
+		<h3>Venuša</h3>
+		<div class="popis">
+		<p>Venuša je druhá planéta slnečnej sústavy (v poradí od Slnka), po Slnku a po Mesiaci najjasnejší objekt viditeľný zo Zeme. Pomenovaná je po starorímskej bohyni lásky. Jej dráha sa nachádza vo vnútri dráhy Zeme, to znamená, že nikdy sa na oblohe nevzdiali ďaleko od Slnka. Maximálna uhlová vzdialenosť Venuše od Slnka môže byť až 48°. So Slnkom a Mesiacom patrí medzi jediné tri nebeské telesá, ktorých svetlo vrhá na Zem tiene viditeľné voľným okom. Je pomenovaná po rímskej bohyni Venuši. Je to terestriálna planéta, čo do veľkosti a skladby veľmi podobná Zemi; niekedy ju preto nazývame „sesterskou planétou“ Zeme. Aj keď orbity všetkých ostatných planét sú elipsovité, orbita Venuše je jediná takmer kružnica, so stredom Slnka iba o 0,7% mimo skutočný stred Venušinej obežnej dráhy.<br />
+		Pretože je Venuša k Slnku bližšie ako Zem, nájdeme ju na oblohe takmer vždy blízko pri Slnku, takže ju je možné zo Zeme vidieť iba krátko pred svitaním alebo krátko po zotmení. Preto je niekedy označovaná ako „Zornička“ alebo „Večernica“, a keď sa objaví, ide o zďaleka najsilnejší bodový zdroj svetla na oblohe. Výnimočne možno Venušu voľným okom uvidieť aj vo dne.<br/><br/>
+		Venuša bola známa už starým Babylončanom okolo 1600 pred Kr. a pravdepodobne bola známa dlho predtým v prehistorických dobách kvôli svojej jasnej viditeľnosti. Jej symbolom je štylizované znázornenie bohyne Venuša držiaca zrkadlo: kruh s malým krížom pod ním ( v Unicode: 2640). Tento symbol sa používa v biológii na označenie jedincov ženského pohlavia.</p></div>
+			<img src="img/venus.png" class="planeta-pic" alt="Venusa"/>
+			<p class='odsadSvk'>Ukáž na planétu!</p>
+			<div class="info">
+			<p><strong>Priemer:</strong><br/> 12 104 km<br/><br/>
+			<strong>Vzdialenosť od Slnka:</strong><br/> 108,2 mil.km<br/><br/>
+			<strong>Dĺžka obehu:</strong><br/> 0,615 roku<br/><br/>
+			<strong>Dĺžka rotácie:</strong><br/> 5 832,5 hodín</p>
+		</div>
+	</div>
+<!-- ZEM -->
+	<div id="popis-planety3" class="hideBox">
+		<h3>Zem</h3>
+		<div class="popis">
+		<p>Zem je naša materská planéta, v poradí tretia planéta slnečnej sústavy. Je to zároveň jediná planéta, na ktorej je podľa súčasných vedeckých poznatkov voda v kvapalnom skupenstve a život. Zem je predmetom skúmania napríklad kozmogónie, geológie, paleontológie či geografie.<br/>
+		V strede Zeme sa nachádza horúce husté jadro, ktoré obklopuje chladnejší plášť z roztavených hornín. Na povrchu je kôra, ktorá dosahuje rôznu hrúbku v závislosti od miesta (pod oceánmi je všeobecne tenšia ako pod kontinentmi). Vďaka pevnému povrchu a vnútornému zloženiu Zem zaraďujeme medzi terestriálne planéty. Zem je najväčšia spomedzi terestriálnych planét slnečnej sústavy a tiež jediná známa planéta, na ktorej sa nachádza voda vo všetkých troch skupenstvách. Väčšina jej povrchu je pokrytá kvapalným oceánom, čo jej pri pohľade zo vzdialeného vesmíru dáva charakteristickú modrú farbu. V blízkosti rotačných pólov je oceán, resp. pevný povrch trvale zamrznutý a vytvára biele polárne čiapočky. Zem je obklopená atmosférou, ktorá vo veľkých vzdialenostiach od povrchu pozvoľna prechádza do medziplanetárneho prostredia. Po prvýkrát Zem ako celok na vlastné oči videla posádka kozmickej lode Apollo 8, ktorá ako prvá opustila obežnú dráhu Zeme a vzdialila sa od nej natoľko, že sa zmestila do zorného poľa ľudského oka.<br/><br/>
+		Astronomický symbol Zeme je kríž vo vnútri kruhu . Jej grécke meno Gaia znamená matka. Gaia bola v staroveku veľmi uctievanou bohyňou Zeme, ktorej zasväcovali množstvo chrámov a oltárov. Gaia dávala život všetkým tvorom, ale neľútostne ho potom brala späť do svojho lona. Bola teda zároveň bohyňou života a smrti.<br/>
+		Zem vznikla približne pred 4,57 miliardami rokov pravdepodobne sformovaním sa z protoplanetárneho disku. Povrch Zeme neustále pretvárajú geologické procesy, napríklad platňová tektonika, ktorá pomaly mení polohy a tvar kontinentov. Veľkú zásluhu na dnešnej podobe Zeme majú aj živé organizmy, ktoré utvárajú biosféru. Počas dlhých miliárd rokov na Zemi vytvorili dýchateľnú atmosféru a pôdu.</p></div>
+			<img src="img/earth.png" class="planeta-pic" alt="Zem"/>
+			<p class='odsadSvk'>Ukáž na planétu!</p>
+			<div class="info">
+			<p><strong>Priemer:</strong><br/> 12 756 km<br/><br/>
+			<strong>Vzdialenosť od Slnka:</strong><br/> 149,6 mil.km<br/><br/>
+			<strong>Dĺžka obehu:</strong><br/> 1 rok<br/><br/>
+			<strong>Dĺžka rotácie:</strong><br/> 23,93 hodín</p>
+		</div>
+	</div>
+<!-- MARS -->
+	<div id="popis-planety4" class="hideBox">
+		<h3>Mars</h3>
+		<div class="popis">
+		<p>Mars je štvrtá planéta slnečnej sústavy v poradí od Slnka. Je to druhá najmenšia planéta (po Merkúre). Pomenovaná je po Marsovi, starorímskom bohovi vojny. Jeho dráha sa nachádza až za dráhou Zeme. Ide o planétu terestrického typu, to znamená, že má pevný horninový povrch pokrytý impaktnými krátermi, vysokými sopkami, hlbokými kaňonmi a ďalšími útvarmi. Obiehajú ho dva mesiace nepravidelného tvaru pomenované Fobos a Deimos.<br/><br/>
+		V období, keď je Mars v opozícii (nachádza sa na opačnej strane oblohy ako Slnko), je viditeľný na oblohe po celú noc. Prvé písomné záznamy o planéte a jej pozorovaní pochádzajú z obdobia prvých civilizácií. Všetky veľké staroveké civilizácie, Egypťania, Babylončania a Gréci, vedeli o tejto „putujúcej hviezde“ a dávali jej svoje pomenovania. Považovali ju za symbol ohňa a krvi, pretože horniny, pôda a obloha na planéte majú červený, alebo ružový odtieň. Nazývali ju „Červený objekt“, „Nebeský oheň“, „Hviezda smrti“ alebo „Boh vojny“.<br/>
+		Takmer 20 úspešných kozmických sond od 60. rokov 20. storočia umožnilo detailné skúmanie planéty. V súčasnosti sú na obežnej dráhe Marsu tri funkčné sondy (Mars Odyssey, Mars Express a Mars Reconnaissance Orbiter) a na povrchu planéty sa pohybujú dve vozidlá misie Mars Exploration Rover (Spirit a Opportunity), ktoré poskytli údaje, umožňujúce zmapovať väčšiu časť povrchu, definovať základné historické obdobia, či porozumieť základným javom odohrávajúcim sa na planéte.</p></div>
+			<img src="img/mars.png" class="planeta-pic" alt="Mars"/>
+			<p class='odsadSvk'>Ukáž na planétu!</p>
+			<div class="info">
+			<p><strong>Priemer:</strong><br/> 6 794 km<br/><br/>
+			<strong>Vzdialenosť od Slnka:</strong><br/> 227,94 mil.km<br/><br/>
+			<strong>Dĺžka obehu:</strong><br/> 1,88 rokov<br/><br/>
+			<strong>Dĺžka rotácie:</strong><br/> 24,62 hodín</p>
+		</div>
+	</div>
+
+	<!-- JUPITER -->
+	<div id="popis-planety5" class="hideBox">
+		<h3>Jupiter</h3>
+		<div class="popis">
+		<p>Jupiter je piata planéta v poradí od Slnka, najväčšia a najhmotnejšia planéta našej slnečnej sústavy. Je pomenovaný po rímskom bohovi Jupiterovi. Symbolom planéty je štylizované znázornenie Jupiterovho božského blesku (v Unicode: ♃).
+		Jupiter má chemické zloženie podobné Slnku a ďalším hviezdam. Líši sa od nich najmä nízkou hmotnosťou, ktorá nestačí na vytvorenie podmienok pre termojadrové reakcie prebiehajúce vo všetkých hviezdach. Neexistuje presná definícia odlišujúca veľké hmotné planéty ako Jupiter od hnedých trpaslíkov, v každom prípade by Jupiter potreboval byť aspoň 80× hmotnejší, aby sa mohol stať hviezdou. Planéty podobné hmotnosťou, rozmermi a zložením Jupiteru sa nazývajú joviálne.<br/><br/>
+		Jupiter je prvou planétou od Slnka, ktorá nemá pevný povrch. Jeho búrlivá atmosféra plynule prechádza do plášťa a vo väčších hĺbkach do horúceho jadra. Rotácia planéty spôsobila, že sa v jej atmosfére utvorili gigantické, farebne jasne odlíšené štruktúry nazývané pásy a zóny. Okrem nich možno už malým ďalekohľadom pozorovať na Jupiteri ďalšie búrkové štruktúry, napríklad známu Veľkú červenú škvrnu, ktorá je z nich najväčšia.<br/>
+		Jupiter sa okolo svojej osi otočí najrýchlejšie zo všetkých planét slnečnej sústavy (otočenie netrvá ani 10 hodín). Planéta má doteraz najväčšiu sústavu mesiacov. Zo 65 jeho doteraz objavených družíc sú najznámejšie 4 najväčšie, nazývané tiež Galileove mesiace, pretože prvý písomný záznam o ich pozorovaní urobil Galileo Galilei v roku 1610. Najväčší Galileiho mesiac, Ganymedes, je zároveň najväčším mesiacom v slnečnej sústave. Ďalšie známe mesiace sú Európa, ktorá je pokrytá ľadovou kôrou a Io, ktorý prejavuje mohutnú sopečnú aktivitu.</p></div>
+			<img src="img/jupiter.png" class="planeta-pic" alt="Jupiter"/>
+			<p class='odsadSvk'>Ukáž na planétu!</p>
+			<div class="info">
+			<p><strong>Priemer:</strong><br/> 142 984 km<br/><br/>
+			<strong>Vzdialenosť od Slnka:</strong><br/> 778,6 mil.km<br/><br/>
+			<strong>Dĺžka obehu:</strong><br/> 11,86 rokov<br/><br/>
+			<strong>Dĺžka rotácie:</strong><br/> 9,83 hodín</p>
+		</div>
+	</div>
+
+	<!-- SATURN -->
+	<div id="popis-planety6" class="hideBox">
+		<h3>Saturn</h3>
+		<div class="popis">
+		<p>Saturn je šiesta planéta Slnečnej sústavy v poradí od Slnka, po Jupiteri druhá najväčšia z planét. Je známa i z prehistorického obdobia. Pomenovaný bol podľa rímskeho boha Saturna, ktorý je obdobou gréckeho Krona. Astronomický symbol pre Saturn je ♄.<br/><br/>
+		Saturn patrí medzi joviálne planéty, to znamená, že nemá pevný povrch, ale len hustú atmosféru, ktorá postupne prechádza do plášťa. Atmosféra je tvorená prevažne vodíkom, ktorý tvorí 96,3 % jej objemu. Viditeľný povrch planéty tvorí svetložltá vrstva mrakov s nejasnými pásmi rôznych odtieňov, ktoré sú rovnobežné s rovníkom. Teplota v hornej oblačnej vrstve dosahuje -140 °C. Objem planéty je približne 95-krát väčší ako objem Zeme, má však zo všetkých planét najmenšiu hustotu: len 0,6873 g/cm³ a ako jediná planéta v slnečnej sústave je ľahší než voda. Saturn je známy najmohutnejšou sústavou prstencov zo všetkých planét slnečnej sústavy. Jeho hlavné prstence, ktoré sú označené veľkými písmenami možno pozorovať zo Zeme už aj malým ďalekohľadom. Okolo planéty obieha tiež početná rodina mesiacov, z ktorých najväčší je Titan, jediný mesiac v slnečnej sústave s hustou atmosférou.<br/>
+		Jeden obeh Saturna okolo Slnka trvá 29,46 pozemského roka. Je ľahko pozorovateľný voľným okom ako žltý neblikajúci objekt jasnosťou porovnateľný s najjasnejšími hviezdami. Od ekliptiky sa nikdy nevzdiali na väčšiu uhlovú vzdialenosť ako 2,5°. Prechod jedným zvieratníkovým znamením mu trvá viac než dva roky.</p></div>
+			<img src="img/saturn.png" class="planeta-pic" alt="Saturn"/>
+			<p class='odsadSvk'>Ukáž na planétu!</p>
+			<div class="info">
+			<p><strong>Priemer:</strong><br/> 120 536 km<br/><br/>
+			<strong>Vzdialenosť od Slnka:</strong><br/> 1427 mil.km<br/><br/>
+			<strong>Dĺžka obehu:</strong><br/> 29,46 rokov<br/><br/>
+			<strong>Dĺžka rotácie:</strong><br/> 10,23 hodín</p>
+		</div>
+	</div>
+
+	<!-- URAN -->
+	<div id="popis-planety7" class="hideBox">
+		<h3>Urán</h3>
+		<div class="popis">
+		<p>Urán je siedma planéta od Slnka, tretia najväčšia a štvrtá najhmotnejšia planéta v slnečnej sústave. Patrí medzi plynné obry a spolu s Neptúnom aj medzi tzv. ľadové obry. Meno má po gréckom bohovi nebies Uranovi, čo je ojedinelé – ostatné planéty sú pomenované po rímskych bohoch. Symboly planéty Urán sú znak ♅ (používaný v astrológii) alebo  (používaný v astronómii). Je to najbližšia planéta k Zemi, ktorá nebola ľuďom známa už od staroveku. Aj napriek tomu, že Urán je možné za priaznivých podmienok pozorovať voľným okom na nočnej oblohe, antickí astronómovia ho kvôli pomalej rýchlosti a nízkej jasnosti nepovažovali za planétu, ale za hviezdu. Objav Urána ohlásil William Herschel 13. marca 1781, čím prvýkrát v modernej dobe posunul známe hranice slnečnej sústavy.<br/><br/>
+		Chemickým zložením sa Urán podobá Neptúnu. Obe planéty majú rozdielne celkové zastúpenie prvkov oproti Jupiteru či Saturnu. Urán však má podobné zloženie atmosféry ako Jupiter či Saturn. Tvoria ju prevažne plynné formy vodíka a hélia, ale obsahuje aj výrazný podiel vody, amoniaku a metánu so stopami ďalších uhľovodíkov. Atmosféra Urána je najchladnejšou v slnečnej sústave, minimálne teploty sa pohybujú okolo 49 K. Jej štruktúra je vrstevnatá: v najnižších poschodiach sa nachádzajú mraky vody, vo vrchných poschodiach mraky tvorené hlavne metánom. Vnútro planéty je pravdepodobne zložené predovšetkým z ľadu a kamenia.<br/>
+		Podobne ako ďalšie plynné planéty má aj Urán prstence, magnetosféru a množstvo mesiacov. Zvláštnosťou Urána je sklon jeho rotačnej osi: os leží takmer v rovine, v ktorej planéta obieha. Severný a južný pól sa preto nachádzajú v oblastiach, ktoré sú u iných planét charakteristické pre rovník. Pri pohľade zo Zeme sa preto občas stane, že sa prstence Urána javia ako terč s Uránom v strede.<br/><br/>
+		Planétu skúmala zblízka len jediná sonda, Voyager 2, ktorá okolo nej preletela v roku 1986. Sonda nespozorovala v atmosfére planéty žiadne väčšie množstvo mračien a búrkových systémov, ktoré sú typické pre iné plynné obry. Pozemské pozorovania však priniesli náznaky sezónnych zmien počasia, s čím súvisia aj vetry vanúce v atmosfére. Tie môžu dosahovať rýchlosť až 900 km/h.</p></div>
+			<img src="img/uranus.png" class="planeta-pic" alt="Uran"/>
+			<p class='odsadSvk'>Ukáž na planétu!</p>
+			<div class="info">
+			<p><strong>Priemer:</strong><br/> 51 118 km<br/><br/>
+			<strong>Vzdialenosť od Slnka:</strong><br/> 2569,6 mil.km<br/><br/>
+			<strong>Dĺžka obehu:</strong><br/> 84,01 rokov<br/><br/>
+			<strong>Dĺžka rotácie:</strong><br/> 17,24 hodín</p>
+		</div>
+	</div>
+
+<!-- NEPTUN -->
+	<div id="popis-planety8" class="hideBox">
+		<h3>Neptún</h3>
+		<div class="popis">
+		<p>Neptún je ôsma a najvzdialenejšia planéta slnečnej sústavy. Rozhodlo o tom hlasovanie na 26. kongrese Medzinárodnej astronomickej únie v Prahe 24. augusta 2006. Dovtedy bolo poslednou planétou slnečnej sústavy Pluto.
+		So svojim rovníkovým priemerom 49 528 km je štvrtou najväčšou planétou, jeho hmotnosť však z neho robí tretiu najhmotnejšiu planétu slnečnej sústavy. Neptún je 17-krát ťažší ako Zem a iba o niečo prekonáva svoju susednú planétu Urán (14-krát ťažší ako Zem). Planéta je pomenovaná podľa starorímskeho boha mora Neptúna.[8] Svojou stavbou, hmotnosťou a chemickým zložením sa zaraďuje k plynným obrom (joviálnym planétam).. Jeho astronomický symbol je trojzubec. (♆, Unicode U+2646)<br/><br/>
+		Atmosféra Neptúna sa skladá najmä z vodíka a hélia, so stopami metánu, ktorý spôsobuje modrú farbu planéty. Toto zafarbenie je omnoho výraznejšie ako pri Uráne, ktorý má tiež podobné množstvo metánu, ale v atmosfére Neptúna sa nachádza pravdepodobne ešte neznáma zložka ktorá toto zafarbenie zosilňuje. V atmosfére Neptúna tiež dujú najsilnejšie vetry z planét slnečnej sústavy, rýchlosťami približne 2 500 km/h.<br/>
+		Ako všetky plynné obry v slnečnej sústave, aj Neptún má prstence, ktoré sú však omnoho menej výrazné ako pri Saturne. Boli objavené tímom Edvarda Guinana, pričom predpokladali že prstence nie sú kompletné. Toto však vyvrátila sonda Voyager 2 pri prelete okolo planéty. Neptún má tiež rodinu mesiacov, potvrdených ich je zatiaľ 13. Známy je najmä Triton, kvôli svojej retrográdnej obežnej dráhe, veľmi nízkej teplote na povrchu (38K) a extrémne jemnej atmosfére (14 mikrobarov), zloženej z dusíka a metánu.<br/><br/>
+		Planéta bola objavená 23. septembra 1846 Johannom Gallom a študentom astronómie Louisom d'Arrestom. Neptún je prvou planétou objavenou skôr na základe matematických výpočtov ako priamym pozorovaním. Z porúch v dráhe Uránu astronómovia odvodzovali jeho existenciu. Neptún z blízka skúmala zatiaľ iba jediná sonda - Voyager 2.</p></div>
+			<img src="img/neptune.png" class="planeta-pic" alt="Neptune"/>
+			<p class='odsadSvk'>Ukáž na planétu!</p>
+			<div class="info">
+			<p><strong>Priemer:</strong><br/> 49 532 km<br/><br/>
+			<strong>Vzdialenosť od Slnka:</strong><br/> 4496,6 mil.km<br/><br/>
+			<strong>Dĺžka obehu:</strong><br/> 164,79 rokov<br/><br/>
+			<strong>Dĺžka rotácie:</strong><br/> 16,11 hodín</p>
+		</div></div>
+	</div>
+	<div id="footer">
+	<a href="http://www.w3.org/html/logo/">
+<img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics" class='html5img'>
+</a>
+<p class="footer-text">Best experience with -webkit- browser.<i>Text from Wikipedia.</i></p>
+<p class="about">Author: <a href="https://twitter.com/#!/TomasStankovic" target="_blank">@TomasStankovic</a></p>
+</div>
+</body>
+</html>
